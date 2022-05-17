@@ -118,15 +118,10 @@
       </div>
     </section>
     <section class="my-20">
-      <div class="mb-8 text-center">
-        <h2 class="mb-4 text-5xl font-semibold leading-[60px]">
-          Special Homes
-        </h2>
-        <p class="mb-8 text-lg font-medium">
-          Find your place with an immersive photo experience and the most
-          listings, including things you won't find anywhere else.
-        </p>
-      </div>
+      <SectionHeading
+        title="Special Homes"
+        subtitle="Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else."
+      />
       <div class="grid grid-cols-3 gap-10">
         <div class="overflow-hidden rounded-2xl">
           <img src="~/assets/images/home02.jpg" alt="" />
@@ -197,13 +192,10 @@
       </div>
     </section>
     <section class="my-20">
-      <div class="mb-8 text-center">
-        <h2 class="mb-4 text-5xl font-semibold leading-[60px]">Our Service</h2>
-        <p class="mb-8 text-lg font-medium">
-          When it comes to real estate and properties, we're very happy step of
-          the way
-        </p>
-      </div>
+      <SectionHeading
+        title="Our Service"
+        subtitle="When it comes to real estate and properties, we're very happy step of the way."
+      />
       <div class="grid grid-cols-3 gap-14">
         <div class="text-center">
           <svg
@@ -277,11 +269,7 @@
       </div>
     </section>
     <section class="my-20">
-      <div class="mb-8 text-center">
-        <h2 class="mb-4 text-5xl font-semibold leading-[60px]">
-          Our best blog
-        </h2>
-      </div>
+      <SectionHeading title="Our best blog" />
       <div class="flex items-center space-x-8">
         <div class="w-1/2">
           <div class="flex flex-col space-y-12">
