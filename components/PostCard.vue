@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/" class="flex space-x-4">
+  <NuxtLink :to="'/blog/' + id" class="flex space-x-4">
     <img
       src="~/assets/images/home02.jpg"
       alt=""
@@ -21,6 +21,10 @@
 export default {
   name: 'PostCard',
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     title: {
       type: String,
       required: true,

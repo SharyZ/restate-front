@@ -10,6 +10,7 @@
       <HomeCard
         v-for="house in houses"
         :key="house.id"
+        :id="house.id"
         :price="house.price"
         :address="house.address"
         :city="house.city"

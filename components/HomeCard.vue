@@ -15,7 +15,7 @@
       </div>
     </div>
     <NuxtLink
-      to="/"
+      :to="'/explore/' + id"
       class="block w-full bg-rose-400 p-2 text-center font-semibold text-white"
     >
       View details
@@ -27,6 +27,9 @@
 export default {
   name: 'HomeCard',
   props: {
+    id: {
+      type: Number,
+    },
     price: {
       type: Number,
     },

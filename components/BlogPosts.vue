@@ -9,6 +9,7 @@
           <PostCard
             v-for="post in posts"
             :key="post.id"
+            :id="post.id"
             :title="post.title"
             :subtitle="post.short_description"
             :date="post.created_at"
