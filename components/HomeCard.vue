@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden rounded-2xl">
-    <img src="~/assets/images/home02.jpg" alt="" />
+    <img :src="featuredImage" alt="" />
     <div class="mb-4 p-4">
       <div class="flex items-center space-x-4">
         <div class="flex-grow">
@@ -41,6 +41,11 @@ export default {
     },
     saleType: {
       type: String,
+    },
+    featuredImage: {
+      type: String,
+      required: true,
+      default: '',
     },
   },
 }

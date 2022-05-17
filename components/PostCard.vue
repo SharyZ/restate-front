@@ -1,10 +1,6 @@
 <template>
   <NuxtLink :to="'/blog/' + id" class="flex space-x-4">
-    <img
-      src="~/assets/images/home02.jpg"
-      alt=""
-      class="h-40 w-40 rounded-2xl"
-    />
+    <img :src="featuredImage" alt="" class="h-40 w-40 rounded-2xl" />
     <div>
       <h4 class="mb-4 text-2xl font-semibold">
         {{ title }}
@@ -36,6 +32,11 @@ export default {
       default: '',
     },
     date: {
+      type: String,
+      required: true,
+      default: '',
+    },
+    featuredImage: {
       type: String,
       required: true,
       default: '',

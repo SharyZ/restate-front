@@ -13,6 +13,7 @@
             :title="post.title"
             :subtitle="post.short_description"
             :date="post.created_at"
+            :featuredImage="post.featured_image"
           />
         </div>
       </div>

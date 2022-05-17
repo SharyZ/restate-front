@@ -15,6 +15,7 @@
         :address="house.address"
         :city="house.city"
         :saleType="house.sale_type"
+        :featuredImage="house.featured_image"
       />
     </div>
   </section>
