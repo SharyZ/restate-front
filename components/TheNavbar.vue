@@ -38,7 +38,7 @@ export default {
   @apply py-1 px-2 text-lg font-semibold;
 }
 
-.nav-list-item .nuxt-link-active {
+.nav-list-item .nuxt-link-exact-active {
   @apply border-b-2 border-blue-900;
 }
 </style>
