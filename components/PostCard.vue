@@ -12,7 +12,7 @@
       <p class="mb-2">
         {{ subtitle }}
       </p>
-      <p class="text-rose-500">{{ date }}</p>
+      <p class="text-rose-500">{{ date | formatDate }}</p>
     </div>
   </NuxtLink>
 </template>

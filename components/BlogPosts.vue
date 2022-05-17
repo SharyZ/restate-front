@@ -1,23 +1,17 @@
 <template>
   <section class="my-20">
     <SectionHeading title="Our best blog" />
-    <div class="flex items-center space-x-8">
+    <p v-if="$fetchState.pending">Fetching houses...</p>
+    <p v-else-if="$fetchState.error">An error occurred :(</p>
+    <div v-else class="flex items-center space-x-8">
       <div class="w-1/2">
         <div class="flex flex-col space-y-12">
           <PostCard
-            title="This best kept secret helps new real estate agents find client"
-            subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum impedit distinctio rerum sunt, praesentium nemo?"
-            date="April 28, 2022"
-          />
-          <PostCard
-            title="This best kept secret helps new real estate agents find client"
-            subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum impedit distinctio rerum sunt, praesentium nemo?"
-            date="April 28, 2022"
-          />
-          <PostCard
-            title="This best kept secret helps new real estate agents find client"
-            subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum impedit distinctio rerum sunt, praesentium nemo?"
-            date="April 28, 2022"
+            v-for="post in posts"
+            :key="post.id"
+            :title="post.title"
+            :subtitle="post.short_description"
+            :date="post.created_at"
           />
         </div>
       </div>
@@ -31,6 +25,12 @@
 <script>
 export default {
   name: 'BlogPosts',
+  data: () => ({
+    posts: [],
+  }),
+  async fetch() {
+    this.posts = await this.$axios.$get(`posts/`)
+  },
 }
 </script>
 
